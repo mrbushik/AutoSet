@@ -1,13 +1,21 @@
 import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom';
+import {App} from './App';
 import reportWebVitals from './reportWebVitals';
+import Icons from './assets/images/Icons/icons';
+
+export default Icons;
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <StrictMode>
+      <Router>
+          <App />
+      </Router>
+  </StrictMode>,
   document.getElementById('root')
 );
 

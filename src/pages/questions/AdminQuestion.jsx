@@ -34,7 +34,9 @@ function AdminQuestion() {
     {/* <Header/>  */}
     <FormQuestionWrapper>
     <FakeMenu/>
+    <div>
     <AdminQuestionFrom/>
+    </div>
 </FormQuestionWrapper>
 </LandingWrapper>
     </>

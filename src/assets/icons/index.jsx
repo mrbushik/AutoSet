@@ -32,7 +32,7 @@ import { LockIcon } from "./lock-icon";
 import { DotsIcon } from "./dots-icon";
 import { PlayIcon } from "./play-icon";
 import { AttachIcon } from "./attach-icon";
-
+import { Arrow} from "./arrow";
 export {
 	LogoIcon,
 	PhoneIcon,
@@ -68,4 +68,5 @@ export {
 	DotsIcon,
 	PlayIcon,
 	AttachIcon,
+	Arrow,
 };

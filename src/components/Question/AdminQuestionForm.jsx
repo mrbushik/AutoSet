@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import axios from 'axios'
 import UserLineInfo from './UserLineInfo';
+import PaginationBar from './PaginationBar';
 import {
   SearchIcon,
   ProfileIcon,
@@ -10,8 +11,9 @@ import {
   CollapseIcon,
 
 } from "../../assets/icons";
-import './tect.scss'
-const Table = styled.table``;
+const Table = styled.table`
+height: 700px;
+`;
 const TableNamesContainer = styled.div`
 display: flex;
 `;
@@ -63,6 +65,7 @@ React.useEffect(() => {
     <tr><td></td></tr>
   </tbody>
 </Table>
+ <PaginationBar/>
     </>
   )
 }

@@ -1,14 +1,24 @@
 {
-    "userData":[
+    "userData": [
         {
-            "img": "link",
-"login": "IvanPro1990",
-"RegistrationDate": "01.03.2022",
-"userStatus": "Онлайн",
-"rating": "Silver",
-"discount": "10%",
-"purchasedGoods": "19 шт.",
-"lasrOrder": "28.02.2022"
-        }
-    ]
+        "img": "link",
+        "login": "IvanPro1991",
+        "RegistrationDate": "01.03.2022",
+        "userStatus": "Онлайн",
+        "rating": "Silver",
+        "discount": "10%",
+        "purchasedGoods": "19 шт.",
+        "lastOrder": "28.02.2022"
+    },
+    {
+        "img": "link",
+        "login": "IvanPro1990",
+        "RegistrationDate": "01.03.2022",
+        "userStatus": "Онлайн",
+        "rating": "Silver",
+        "discount": "10%",
+        "purchasedGoods": "19 шт.",
+        "lastOrder": "28.02.2022"
+    }
+]
 }

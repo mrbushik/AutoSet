@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
+import axios from 'axios'
+import UserLineInfo from './UserLineInfo';
 import {
   SearchIcon,
   ProfileIcon,
@@ -29,7 +31,16 @@ purchasedGoods: '19 шт.',
 lasrOrder: '28.02.2022',
 online: 'true'
 }
-
+const [userData, setUserData] = React.useState();
+  
+React.useEffect(() => {
+  const apiUrl = 'http://localhost:3001/userData';
+  axios.get(apiUrl).then((resp) => {
+    const allPersons = resp.data;
+    setUserData(allPersons);
+    // console.log(allPersons);
+  });
+}, [setUserData]);
   const [reverse, setReverse] = React.useState(false)
 
   return (
@@ -52,24 +63,7 @@ online: 'true'
    ? <ReverceTableCell><CollapseIcon color='#EE7500' bg='#2f2f2f' size={20} reverse={true}/></ReverceTableCell>
    : <CollapseIcon color='#EE7500' bg='#2f2f2f' size={20} reverse={true}/>}</TableCell>
 </tr>
-  <tr>
-  { Object.values(fakeData).map((item)=><td>{item}</td>)
-
-}
-  </tr>
- 
-
-  <tr>
-    <td>1.</td>
-    <td>Томаты свежие</td><td>кг</td><td>15,20</td><td>69,00</td><td>1048,80</td>
-  </tr>
-  <tr>
-    <td>2.</td>
-    <td>Огурцы свежие</td><td>кг</td><td>2,50</td><td>48,00</td><td>120,00</td>
-  </tr>
-  <tr>
-    <td >ИТОГО:</td><td>1168,80</td>
-  </tr>
+  <UserLineInfo data={userData}></UserLineInfo>
   </tbody>
 </table>
     </>

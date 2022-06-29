@@ -11,34 +11,30 @@ import {
 
 } from "../../assets/icons";
 
+const Table = styled.table`
 
+`;
+const TableHeader = styled.thead`
+height: 30px
+`;
 const TableNamesContainer = styled.div`
 display: flex;
 `;
-const TableCell = styled.th``;
+// display: flex;
+const TableCell = styled.th`
+`;
 const ReverceTableCell = styled.div`
 transform: rotate(180deg);
 `;
+const TableContainer = styled.tr`
+`;
 function AdminQuestion() {
-const fakeData = {
-img: 'link',
-login: 'IvanPro1990',
-RegistrationDate: '01.03.2022',
-userStatus: 'Онлайн',
-rating: 'Silver',
-discount: '10%',
-purchasedGoods: '19 шт.',
-lasrOrder: '28.02.2022',
-online: 'true'
-}
 const [userData, setUserData] = React.useState();
-  
 React.useEffect(() => {
   const apiUrl = 'http://localhost:3001/userData';
   axios.get(apiUrl).then((resp) => {
     const allPersons = resp.data;
     setUserData(allPersons);
-    // console.log(allPersons);
   });
 }, [setUserData]);
   const [reverse, setReverse] = React.useState(false)
@@ -46,8 +42,8 @@ React.useEffect(() => {
   return (
     <>
    <table>
-    <tbody>
-    <tr>
+   <TableHeader>
+   <TableContainer>
   <TableCell><ProfileIcon color='#EE7500' bg='#2f2f2f' size={30} height={30}/></TableCell>
   <TableCell><TableNamesContainer><p>Логин пользователя</p> 
   <SearchIcon  color='#EE7500' bg='#2f2f2f' size={34}/></TableNamesContainer></TableCell>
@@ -62,7 +58,9 @@ React.useEffect(() => {
    <TableCell>{reverse 
    ? <ReverceTableCell><CollapseIcon color='#EE7500' bg='#2f2f2f' size={20} reverse={true}/></ReverceTableCell>
    : <CollapseIcon color='#EE7500' bg='#2f2f2f' size={20} reverse={true}/>}</TableCell>
-</tr>
+</TableContainer>
+   </TableHeader>
+<tbody>
   <UserLineInfo data={userData}></UserLineInfo>
   </tbody>
 </table>

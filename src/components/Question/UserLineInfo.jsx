@@ -1,23 +1,33 @@
 import React from 'react'
+import styled from 'styled-components';
+
+const UserPhoto = styled.img`
+width: 30px;
+height: 30px;
+`;
+const TableCell = styled.tr`
+`;
+const TableCellItem = styled.td`
+
+`;
 
 function UserLineInfo({data}) {
-    console.log(data);
   return (
     <>
    {data &&
-data.map((obj, id)=>
+data.map((obj)=>
     <tr key={obj.id}>
-    <td><img src={obj.img} alt='фото пользователя'></img></td>
-    <td><p>{obj.login}</p></td>
-    <td>{obj.RegistrationDate}</td>
-    <td>{obj.userStatus}</td>
-    <td>{obj.rating}</td>
-    <td>{obj.discount}</td>
-    <td>{obj.purchasedGoods}</td>
-    <td>{obj.lastOrder}</td>
-    <td>icon</td>
-    <td>icon</td>
-    <td>icon</td>
+    <TableCellItem><UserPhoto src={obj.imgUrl} alt='фото пользователя'/></TableCellItem>
+    <TableCellItem><p>{obj.login}</p></TableCellItem>
+    <TableCellItem>{obj.RegistrationDate}</TableCellItem>
+    <TableCellItem>{obj.userStatus}</TableCellItem>
+    <TableCellItem>{obj.rating}</TableCellItem>
+    <TableCellItem>{obj.discount}</TableCellItem>
+    <TableCellItem>{obj.purchasedGoods}</TableCellItem>
+    <TableCellItem>{obj.lastOrder}</TableCellItem>
+    <TableCellItem>icon</TableCellItem>
+    <TableCellItem>icon</TableCellItem>
+    <TableCellItem>icon</TableCellItem>
   </tr>
 )
    }

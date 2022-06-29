@@ -1,7 +1,8 @@
 {
     "userData": [
         {
-        "img": "link",
+        "id": 1,
+        "imgUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
         "login": "IvanPro1991",
         "RegistrationDate": "01.03.2022",
         "userStatus": "Онлайн",
@@ -10,8 +11,9 @@
         "purchasedGoods": "19 шт.",
         "lastOrder": "28.02.2022"
     },
-    {
-        "img": "link",
+    {   
+        "id": 2,
+        "imgUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
         "login": "IvanPro1990",
         "RegistrationDate": "01.03.2022",
         "userStatus": "Онлайн",

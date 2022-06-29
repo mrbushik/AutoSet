@@ -10,24 +10,25 @@ import {
   CollapseIcon,
 
 } from "../../assets/icons";
-
-const Table = styled.table`
-
-`;
-const TableHeader = styled.thead`
-height: 30px
-`;
+import './tect.scss'
+const Table = styled.table``;
 const TableNamesContainer = styled.div`
 display: flex;
 `;
-// display: flex;
 const TableCell = styled.th`
+padding-left: 20px;
+:first-child{
+  margin-left: 15px;
+}
 `;
 const ReverceTableCell = styled.div`
 transform: rotate(180deg);
+margin-left: 10px;
 `;
 const TableContainer = styled.tr`
+height: 30px;
 `;
+
 function AdminQuestion() {
 const [userData, setUserData] = React.useState();
 React.useEffect(() => {
@@ -41,8 +42,9 @@ React.useEffect(() => {
 
   return (
     <>
-   <table>
-   <TableHeader>
+   <Table>
+   <tbody>
+
    <TableContainer>
   <TableCell><ProfileIcon color='#EE7500' bg='#2f2f2f' size={30} height={30}/></TableCell>
   <TableCell><TableNamesContainer><p>Логин пользователя</p> 
@@ -55,15 +57,12 @@ React.useEffect(() => {
    <TableCell>Последний заказ</TableCell>
    <TableCell><LockIcon color='#EE7500' bg='#2f2f2f' size={30} height={20} width={30}/></TableCell>
    <TableCell><TrashIcon color='#EE7500' bg='#2f2f2f' height={30} width={30}/></TableCell>
-   <TableCell>{reverse 
-   ? <ReverceTableCell><CollapseIcon color='#EE7500' bg='#2f2f2f' size={20} reverse={true}/></ReverceTableCell>
-   : <CollapseIcon color='#EE7500' bg='#2f2f2f' size={20} reverse={true}/>}</TableCell>
+   <TableCell><ReverceTableCell><CollapseIcon color='#EE7500' bg='#2f2f2f' size={20} reverse={true}/></ReverceTableCell></TableCell>
 </TableContainer>
-   </TableHeader>
-<tbody>
-  <UserLineInfo data={userData}></UserLineInfo>
+  <UserLineInfo  data={userData}></UserLineInfo>
+    <tr><td></td></tr>
   </tbody>
-</table>
+</Table>
     </>
   )
 }

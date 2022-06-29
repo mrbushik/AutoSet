@@ -18,7 +18,6 @@ color: #fff;
 `;
 const FormQuestionWrapper = styled.div`
 display: flex;
-    width: 1190px;
     margin: 0 auto;
 `;
 const FakeMenu = styled.div`
@@ -32,7 +31,7 @@ function AdminQuestion() {
   return (
     <>
 <LandingWrapper>
-    <Header/>
+    {/* <Header/>  */}
     <FormQuestionWrapper>
     <FakeMenu/>
     <AdminQuestionFrom/>

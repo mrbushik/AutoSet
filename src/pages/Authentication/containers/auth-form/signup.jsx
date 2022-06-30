@@ -19,9 +19,7 @@ const RightFieldsWrapper = styled.div`
     padding-left: 20px;
 `;
 
-export const SignUpFormContainer = ({
-                                        inputComponent: InputComponent,
-                                        buttonComponent: ButtonComponent,
+export const SignUpFormContainer = ({   inputComponent: InputComponent, buttonComponent: ButtonComponent,
                                     }) => {
     return (
         <BaseFormContainer

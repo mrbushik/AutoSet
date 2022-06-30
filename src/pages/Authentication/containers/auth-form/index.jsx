@@ -20,6 +20,7 @@ export const AuthFormContainer = ({
 	const setSignInMode = () => setActiveModeIndex(SIGN_IN_MODE);
 	const setSignUpMode = () => setActiveModeIndex(SIGN_UP_MODE);
 	const setRestoreMode = () => setActiveModeIndex(RESTORE_MODE);
+	
 
 	const renderForm = () => {
 		const props = {
@@ -28,13 +29,14 @@ export const AuthFormContainer = ({
 		};
 		switch (activeModeIndex) {
 			case SIGN_IN_MODE:
-				return <SignInFormContainer {...props} />;
+				return <SignInFormContainer {...props} />
 			case SIGN_UP_MODE:
 				return <SignUpFormContainer {...props} />;
 			case RESTORE_MODE:
 				return <ResetPassword {...props} />;
 			default:
-				return <SignInFormContainer {...props} />;
+				return (
+				<SignInFormContainer {...props} />)
 		}
 	};
 

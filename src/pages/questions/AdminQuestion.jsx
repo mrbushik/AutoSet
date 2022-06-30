@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import {Header} from "../../components/Header/header";
+import OrderDecorationForm from '../Authentication/containers/OrderDecoration/OrderDecorationForm';
 import AdminQuestionFrom from '../../components/Question/AdminQuestionForm';
 
 const LandingWrapper = styled.div`
@@ -33,7 +34,7 @@ function AdminQuestion() {
 <LandingWrapper>
     <Header/> 
     <FormQuestionWrapper>
-    <FakeMenu/>
+    <OrderDecorationForm/>
     <div>
     <AdminQuestionFrom/>
     </div>

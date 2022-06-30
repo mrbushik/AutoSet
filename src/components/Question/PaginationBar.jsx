@@ -11,12 +11,21 @@ import styled from 'styled-components';
 const PaginationContainer = styled.div`
 display: flex;
 justify-content: space-between;
+background: #1A1A1A;
+height: 24px;
 `;
 const PaginationContainerItem = styled.div`
 
 `;
 const ArrowContainer = styled.div`
 display: flex;
+`;
+const PaginationInfoTitles = styled.h5`
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 8px;
+line-height: 9px;
 `;
 
 const ArrowContainerItem = styled.div`
@@ -26,9 +35,9 @@ const DoubleArrowsContainer = styled.div`
 margin-top: 9px;
 `;
 const ArrowContainerPosition = styled.div`
-margin-top: -14px;
+margin-top: -16px;
 margin-left: 18px;
-margin-right: 6px;
+margin-right: 5px;
 `;
 const DoubleArrowsRightContainer = styled.div`
 display: flex;
@@ -54,7 +63,7 @@ function PaginationBar() {
     <>
     <PaginationContainer>
         <PaginationContainerItem>
-        <h5>Сделано в insaitika group</h5>
+        <PaginationInfoTitles>Сделано в insaitika group</PaginationInfoTitles>
         </PaginationContainerItem>
         <PaginationContainerItem>
             <ArrowContainer>

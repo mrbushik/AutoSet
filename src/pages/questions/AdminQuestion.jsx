@@ -31,7 +31,7 @@ function AdminQuestion() {
   return (
     <>
 <LandingWrapper>
-    {/* <Header/>  */}
+    <Header/> 
     <FormQuestionWrapper>
     <FakeMenu/>
     <div>

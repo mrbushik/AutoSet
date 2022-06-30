@@ -27,6 +27,16 @@ const ReverceTableCell = styled.div`
 transform: rotate(180deg);
 margin-left: 10px;
 `;
+const DiscountRectangle =styled.div`
+width: 65px;
+height: 22px;
+background: #1A1A1A;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+`;
 function UserLineInfo({data}) {
   const [reverse, setReverse] = React.useState(false)
 
@@ -40,7 +50,7 @@ function UserLineInfo({data}) {
     <TableCellItem>{obj.RegistrationDate}</TableCellItem>
     <TableCellItem>{obj.userStatus}</TableCellItem>
     <TableCellItem>{obj.rating}</TableCellItem>
-    <TableCellItem>{obj.discount}</TableCellItem>
+    <TableCellItem><DiscountRectangle>{obj.discount}%</DiscountRectangle></TableCellItem>
     <TableCellItem>{obj.purchasedGoods}</TableCellItem>
     <TableCellItem>{obj.lastOrder}</TableCellItem>
     <TableCellItem><LockIcon color='#EE7500' bg='#2f2f2f' size={30} height={20} width={30}/></TableCellItem>

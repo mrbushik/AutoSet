@@ -40,7 +40,6 @@ React.useEffect(() => {
     setUserData(allPersons);
   });
 }, [setUserData]);
-  const [reverse, setReverse] = React.useState(false)
 
   return (
     <>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import {Header} from "../../components/Header/header";
-import OrderDecorationForm from '../Authentication/containers/OrderDecoration/OrderDecorationForm';
+import PrototaipProfileForm from '../Authentication/containers/OrderDecoration/Prototaip-Profile-Form';
 import AdminQuestionFrom from '../../components/Question/AdminQuestionForm';
 
 const LandingWrapper = styled.div`
@@ -34,7 +34,7 @@ function AdminQuestion() {
 <LandingWrapper>
     <Header/> 
     <FormQuestionWrapper>
-    <OrderDecorationForm/>
+    <PrototaipProfileForm/>
     <div>
     <AdminQuestionFrom/>
     </div>

@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import { useForm } from "react-hook-form";
 
-
 import {
     CollapseIcon,
   
@@ -95,7 +94,7 @@ const CountTitleContainer = styled.div`
 margin-top: 20px;
 margin-left: 5%;
 `;
-const SubmitInputBtn = styled.input`
+const SubmitInputBtn = styled.button`
 background: #494949;
 border-radius: 5px;
 height: 46px;
@@ -110,7 +109,7 @@ line-height: 21px;
 border: none;
 `;
 function OrderDecorationForm({productCount = 4, productFullPrice = 100, }) {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit,  formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
   
   return (
@@ -125,7 +124,7 @@ function OrderDecorationForm({productCount = 4, productFullPrice = 100, }) {
     <form onSubmit={handleSubmit(onSubmit)}>
          <FormLabel>
          * Фамилия 
-      <FormInput placeholder='Иванов'  {...register("name",{ required: true }, { pattern:/^\d{6}$/ })} /> 
+      <FormInput placeholder='Иванов'  {...register("name",{ required: true })} /> 
       {errors.name && <span>Это поле обязательно должно быть заполненно</span>}
             </FormLabel>   
       <FormLabel>
@@ -133,7 +132,6 @@ function OrderDecorationForm({productCount = 4, productFullPrice = 100, }) {
       <FormInput placeholder='Иван'{...register("suriname", { required: true })} />
       {errors.suriname && <span>Это поле обязательно должно быть заполненно</span>}
       </FormLabel>
-      {/* errors will return when field validation fails  */}
       <FormLabel>
         Телефон
       <FormInput placeholder='Введите номер телефона' {...register("phone")} />
@@ -148,8 +146,7 @@ function OrderDecorationForm({productCount = 4, productFullPrice = 100, }) {
       {/* в пропс надо передать уже посчитанную сумму */}
       <CountInfoTitle>Итого: <b>{productFullPrice}</b> BYN</CountInfoTitle>
       </CountTitleContainer>
-      <SubmitInputBtn type="submit"  placeholder='llll'/>
-      
+      <SubmitInputBtn type="submit">Оформить</SubmitInputBtn>
     </form>
     </FormContainer>
     </>

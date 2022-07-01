@@ -2,6 +2,10 @@
     "userData": [
         {
         "id": 1,
+        "name": "John",
+        "surname": "Smith",
+        "number": "3752988203",
+        "email": "john@example.com",
         "imgUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
         "login": "IvanPro1991",
         "RegistrationDate": "01.03.2022",
